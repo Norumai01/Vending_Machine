@@ -1,0 +1,70 @@
+Product Class:
+
+Attributes:	
+String name
+Double price
+
+Methods:
+String getName()
+Void setName()
+Double getPrice()
+Void setPrice()
+toString()
+
+________________________________________
+
+Snack extends Product:
+
+Attributes:
+Boolean isVegan
+
+Methods:
+Boolean getIsVegan()
+void setIsVegan()
+toString
+
+________________________________________
+
+Beverage extends Product:
+
+Attributes:
+Double flOunces
+
+Methods:
+Double getflOunces()
+void setflOunces()
+toString()
+
+________________________________________
+
+Slot <T extends Product>:
+
+Attributes:
+T product
+Integer quantity
+
+Method:
+T getProduct()
+void setProduct()
+Integer getQuantity()
+void setQuantity()
+toString()
+
+________________________________________
+
+VendingMachine <T extends Product, Slot>:
+
+Atrributes:
+T slots 
+
+Method:
+void addProduct(String code, Slot<T> slot)
+Product dispenseProduct(String code)
+void displayProducts()
+
+
+VendRunner:
+main 
+
+
+
