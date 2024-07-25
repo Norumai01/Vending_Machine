@@ -22,4 +22,9 @@ public class Slot <T extends Product> {
     public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
+
+    @Override
+    public String toString() {
+        return  product.toString() + " " + quantity;
+    }
 }
