@@ -1,4 +1,13 @@
 public class VendRunner {
+    public static void dispensedChecker(Product product) {
+        if (product != null) {
+            System.out.println("Dispensed: " + product.getName() + "\n");
+        }
+        else {
+            System.out.println("Product not available\n");
+        }
+    }
+
     public static void main(String[] args) {
         VendingMachine vm = new VendingMachine();
 
@@ -11,9 +20,9 @@ public class VendRunner {
         vm.displayProducts();
 
         Product dispensed = vm.dispenseProduct("A1");
-        if (dispensed != null) {
-            System.out.println("Dispensed: " + dispensed.getName() + "\n");
-        }
+        dispensedChecker(dispensed);
+        dispensed = vm.dispenseProduct("A5");
+        dispensedChecker(dispensed);
 
         vm.displayProducts();
     }

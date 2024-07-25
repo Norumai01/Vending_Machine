@@ -20,7 +20,7 @@ public class VendingMachine {
             }
             return slots.get(code).getProduct();
         }
-        System.out.println("Product not available");
+        //System.out.println("Product not available");
         return null;
     }
 
