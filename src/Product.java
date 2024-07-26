@@ -5,6 +5,9 @@ public class Product {
     public Product(String name, double price) {
         this.name = name;
         this.price = price;
+        if (name == null || price < 0 || name.isEmpty()) {
+            throw new IllegalArgumentException("Product name cannot be null/empty and price is less than 0.");
+        }
     }
 
     public String getName() {
@@ -13,6 +16,9 @@ public class Product {
 
     public void setName(String name) {
         this.name = name;
+        if (name == null || name.isEmpty()) {
+            throw new IllegalArgumentException("Product name cannot be null/empty.");
+        }
     }
 
     public double getPrice() {
@@ -21,6 +27,9 @@ public class Product {
 
     public void setPrice(double price) {
         this.price = price;
+        if (price < 0) {
+            throw new IllegalArgumentException("Product name cannot be null/empty and price is less than 0.");
+        }
     }
 
     @Override
